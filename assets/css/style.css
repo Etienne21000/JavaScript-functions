@@ -1,0 +1,24 @@
+.main-header-container, .main-container {
+    width: 50%;
+    margin:auto;
+}
+
+.palindrome-message {
+    display: none;
+}
+
+.palindrome-error-display, .palindrome-success-display {
+    display: block;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    color: #ffffff;
+}
+
+.palindrome-error-display {
+    background-color: indianred;
+}
+.palindrome-success-display {
+    background-color: forestgreen;
+}
