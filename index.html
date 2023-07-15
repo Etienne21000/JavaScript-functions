@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Functiond</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </head>
+
 <body>
     <section class="main-header-container">
         <h1>Fonctions JavaScript</h1>
     </section>
     <section class="main-container">
-        <div class="palymdorme-container">
-            
+        <div class="palindrome-container">
+            <h2 class="palindrome-title">Trouver les palindromes</h2>
+
             <form class="palindrome-form">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Entrez un mot</label>
-                  <input type="text" class="form-control palindrome-text-input" id="palindrome-text-input">
-                  <span class="palindrome-message"></span>
+                    <label for="palindrome">Entrez un mot</label>
+                    <input type="text" name="palindrome" class="form-control palindrome-text-input"
+                        id="palindrome-text-input">
+                    <span class="palindrome-message"></span>
                 </div>
                 <button type="submit" class="btn btn-primary palindrome-submit-btn">Verifier</button>
-              </form>
+            </form>
 
         </div>
+
+        <div class="factoriel-container">
+            <h2 class="factoriel-title">Trouver les factoriels d'un nombre</h2>
+
+            <form class="factoriel-form">
+                <div class="form-group">
+                    <label for="factoriel">Trouver tous les factoriels de :</label>
+                    <input type="text" name="factoriel" class="form-control factoriel-text-input"
+                        id="factoriel-text-input">
+                    <span class="factoriel-message"></span>
+                </div>
+                <button type="button" class="btn btn-primary factoriel-submit-btn" data-toggle="modal"
+                    data-target="#factorielModal">Trouver</button>
+            </form>
+
+            <div class="modal fade" id="factorielModal" tabindex="-1" aria-labelledby="factorielModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="factorielModalLabel">Liste des factoriel de </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="result-factoriel-container">
+                                <p class="factResult"></p>
+                                <p class="factOperation"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 </body>
+
 </html>
