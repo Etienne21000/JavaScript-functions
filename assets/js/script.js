@@ -126,10 +126,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
     function palindromeResponse(entry) {
-        let splitValueArray = entry.value.split("");
+        let entryValue = entry.value.toLowerCase(); 
+        let splitValueArray = entryValue.split("");
         let reverseArrayValue = splitValueArray.reverse();
         let palindromeJoin = reverseArrayValue.join("");
-        if (palindromeJoin === entry.value) {
+        if (palindromeJoin === entryValue) {
             success.palindrome = 'Bravo, il s\'agit bien d\'un palindrome !';
         } else {
             error.palindrome = 'Dommage, il ne s\'agit pas d\'un palindrome !';
